@@ -151,7 +151,7 @@ body {
     float: left; }
   #nav .left {
     width: 210px;
-    height: 650px;
+    height: 648px;
     margin-left: 27px;
     padding: 0 6px;
     border: 3px solid #ddd;
@@ -178,22 +178,25 @@ body {
       height: 20px; }
       #nav .left .li2 span {
         position: relative;
-        top: -5px;
         left: 5px; }
+      #nav .left .li2 .dot {
+        margin-top: 3px; }
+    #nav .left .last {
+      border: none; }
   #nav .center {
-    width: 760px;
+    width: 785px;
     height: 650px; }
     #nav .center .img, #nav .center .img img {
-      width: 760px;
+      width: 785px;
       height: 310px; }
     #nav .center ul .li1 a {
       display: inline-block;
-      width: 190px;
+      width: 196px;
       height: 159px;
       background: url("../images/index/nav-center1.jpg") no-repeat; }
     #nav .center ul .li2 a {
       display: inline-block;
-      width: 190px;
+      width: 196px;
       height: 180px;
       background: url("../images/index/nav-center2.jpg") no-repeat; }
   #nav .right {
@@ -248,6 +251,24 @@ body {
       background: url("../images/index/nav-right3_4.jpg") no-repeat center center; }
 
 #hot {
-  height: 282px; }
+  height: 282px;
+  background: #ebebeb;
+  padding-left: 27px;
+  overflow: hidden; }
+  #hot h1 {
+    height: 42px;
+    line-height: 42px; }
+  #hot ul li {
+    float: left; }
+
+#main {
+  height: 5115px;
+  padding-left: 27px; }
+  #main ul {
+    height: 62px;
+    border-bottom: 2px solid #e8e8e8;
+    line-height: 62px; }
+    #main ul .li1 {
+      border-bottom: 2px solid #ff931b; }
 
 /*# sourceMappingURL=index-main.css.map */
