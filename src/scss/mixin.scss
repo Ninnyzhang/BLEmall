@@ -1,0 +1,9 @@
+@mixin link-color($normal:#666,$hover:red){
+  color: $normal;
+  &:hover {color : $hover};
+}
+
+@mixin background($normal,$hover){
+  background: $normal;
+  &:hover {background: $hover};
+}

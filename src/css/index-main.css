@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+ul li {
+  list-style: none; }
+
+img {
+  border: none; }
+
+a {
+  text-decoration: none; }
+
+body {
+  font-size: 12px; }
+
+#header {
+  width: 100%;
+  height: 32px;
+  background: #f9f9f9;
+  border-bottom: 1px solid #eee;
+  line-height: 32px; }
+  #header span {
+    margin-left: 42px; }
+  #header ul {
+    display: inline-block;
+    float: right;
+    margin-right: 50px; }
+    #header ul li {
+      float: left;
+      height: 32px;
+      border-left: 1px solid #f9f9f9;
+      border-right: 1px solid #f9f9f9;
+      border-bottom: 1px solid #eee;
+      width: 90px;
+      text-align: center;
+      background: #f9f9f9 url("../images/index/arrow-bottom.png") no-repeat center right; }
+      #header ul li:hover {
+        background: #fff url("../images/index/arrow-top.png") no-repeat center right; }
+      #header ul li img {
+        position: relative;
+        top: 2px;
+        margin-right: 2px; }
+      #header ul li a {
+        color: #666; }
+        #header ul li a:hover {
+          color: red; }
+      #header ul li dl {
+        display: none;
+        width: 90px; }
+        #header ul li dl dd {
+          background: #fff; }
+          #header ul li dl dd:hover {
+            background: #e8e8e8; }
+    #header ul .header-nav {
+      width: 90px; }
+    #header ul .li6 {
+      background-image: none;
+      background: none; }
+      #header ul .li6:hover {
+        background: none; }
+
+#search {
+  height: 65px;
+  padding-left: 44px;
+  padding-top: 25px;
+  overflow: hidden; }
+  #search img, #search .txt, #search .form, #search .form button, #search .form ul li {
+    float: left; }
+  #search .form {
+    position: relative;
+    top: -20px;
+    z-index: 0;
+    margin-left: 155px; }
+    #search .form span {
+      display: inline-block;
+      width: 30px;
+      text-align: center;
+      cursor: pointer; }
+    #search .form button {
+      width: 72px;
+      height: 40px;
+      background: #d93738 url("../images/index/fangdajing.png") no-repeat center center;
+      border: none;
+      margin-bottom: 5px; }
+  #search .txt {
+    width: 374px;
+    height: 32px;
+    border: 4px solid #d93738; }
+  #search ul li a {
+    color: #7d6666;
+    padding: 0 2px; }
+  #search .right {
+    float: right;
+    margin-right: 50px;
+    width: 250px; }
+    #search .right li {
+      float: left;
+      font-size: 16px; }
+    #search .right .li1 {
+      width: 90px;
+      height: 55px;
+      position: relative; }
+    #search .right .li2 {
+      height: 55px;
+      border-left: 1px solid #eee;
+      margin-right: 20px; }
+    #search .right img {
+      position: absolute; }
+    #search .right a {
+      position: absolute;
+      bottom: 0; }
+    #search .right span {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      font-weight: bold;
+      color: #ffffff;
+      border-radius: 10px;
+      background: #ccc;
+      left: 50%; }
+
+#nav {
+  width: 100%;
+  height: 686px; }
+  #nav .nav {
+    height: 35px;
+    background: #c12324;
+    padding-left: 27px;
+    position: relative; }
+    #nav .nav li {
+      float: left;
+      padding: 0 30px;
+      font: bold 16px/35px "arial";
+      color: #FFF;
+      cursor: pointer;
+      background: #c12324; }
+      #nav .nav li:hover {
+        background: #ac1010; }
+    #nav .nav .li1 {
+      width: 225px;
+      font-weight: 500;
+      padding: 0;
+      text-indent: 20px;
+      background: #d93637; }
+    #nav .nav img {
+      position: absolute;
+      bottom: 0; }
+  #nav .left, #nav .center, #nav .right {
+    float: left; }
+  #nav .left {
+    width: 210px;
+    height: 650px;
+    margin-left: 27px;
+    padding: 0 6px;
+    border: 3px solid #ddd;
+    border-top: none; }
+    #nav .left .img2 {
+      float: right; }
+    #nav .left li {
+      width: 190px;
+      border-bottom: 1px solid #eee;
+      padding-top: 6px;
+      overflow: hidden;
+      font-size: 14px; }
+      #nav .left li img {
+        float: left; }
+    #nav .left .li1 {
+      height: 51px; }
+      #nav .left .li1 .div2 {
+        clear: both;
+        margin-top: 15px; }
+        #nav .left .li1 .div2 a {
+          padding: 0 4px;
+          color: #333333; }
+    #nav .left .li2 {
+      height: 20px; }
+      #nav .left .li2 span {
+        position: relative;
+        top: -5px;
+        left: 5px; }
+  #nav .center {
+    width: 760px;
+    height: 650px; }
+    #nav .center .img, #nav .center .img img {
+      width: 760px;
+      height: 310px; }
+    #nav .center ul .li1 a {
+      display: inline-block;
+      width: 190px;
+      height: 159px;
+      background: url("../images/index/nav-center1.jpg") no-repeat; }
+    #nav .center ul .li2 a {
+      display: inline-block;
+      width: 190px;
+      height: 180px;
+      background: url("../images/index/nav-center2.jpg") no-repeat; }
+  #nav .right {
+    width: 236px;
+    height: 650px; }
+    #nav .right img {
+      display: block; }
+    #nav .right div {
+      border: 1px solid #eee; }
+    #nav .right h3 {
+      font-size: 12px;
+      height: 30px;
+      line-height: 30px;
+      border-bottom: 2px solid #ccc; }
+      #nav .right h3 a {
+        color: #8d8d8d;
+        padding: 0 5px; }
+      #nav .right h3 .more {
+        float: right;
+        color: #bbb; }
+    #nav .right p {
+      line-height: 25px; }
+      #nav .right p span {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background: red;
+        margin: 0 10px; }
+    #nav .right ul {
+      height: 27px;
+      line-height: 27px;
+      border-bottom: 2px solid #ccc; }
+      #nav .right ul a {
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+        height: 27px; }
+    #nav .right .div4 a {
+      display: inline-block;
+      width: 52px;
+      height: 90px;
+      text-align: center;
+      line-height: 150px;
+      box-shadow: 5px 10px 6px #ccc; }
+    #nav .right .div4 .a1 {
+      background: url("../images/index/nav-right3_1.jpg") no-repeat center center; }
+    #nav .right .div4 .a2 {
+      background: url("../images/index/nav-right3_2.jpg") no-repeat center center; }
+    #nav .right .div4 .a3 {
+      background: url("../images/index/nav-right3_3.jpg") no-repeat center center; }
+    #nav .right .div4 .a4 {
+      background: url("../images/index/nav-right3_4.jpg") no-repeat center center; }
+
+#hot {
+  height: 282px; }
+
+/*# sourceMappingURL=index-main.css.map */
