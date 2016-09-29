@@ -15,25 +15,28 @@ body {
   font-size: 12px; }
 
 #header {
-  width: 1300px;
+  width: 100%;
   height: 32px;
   background: #f9f9f9;
   border-bottom: 1px solid #eee;
   line-height: 32px; }
   #header span {
+    width: 108px;
     margin-left: 42px; }
   #header ul {
+    width: 552px;
+    height: 32px;
     display: inline-block;
     float: right;
     position: relative;
     z-index: 10; }
     #header ul li {
+      width: 90px;
       float: left;
       height: 32px;
       border-left: 1px solid #f9f9f9;
       border-right: 1px solid #f9f9f9;
       border-bottom: 1px solid #eee;
-      width: 90px;
       text-align: center;
       background: #f9f9f9 url("../images/index/arrow-bottom.png") no-repeat center right; }
       #header ul li:hover {
@@ -48,6 +51,7 @@ body {
           color: red; }
       #header ul li dl {
         display: none;
+        background: red;
         width: 90px; }
         #header ul li dl dd {
           background: #fff; }
