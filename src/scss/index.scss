@@ -1,5 +1,5 @@
 #header{
-  width:$width;
+  width:1300px;
   height:$header-height;
   background: $header-background;
   border-bottom: $header-border;
@@ -10,7 +10,8 @@
   ul{
     display:inline-block;
     float:right;
-    margin-right:50px;
+    position:relative;
+    z-index: 10;
     li{
       float: left;
       height: $header-height;
@@ -86,7 +87,6 @@
   }
   .right{
     float:right;
-    margin-right:50px;
     width:250px;
     li{
       float:left;
@@ -199,21 +199,21 @@
     }
   }
   .center{
-    width:785px;
+    width:830px;
     height:650px;
     .img,.img img{
-      width:785px;
+      width:830px;
       height:310px;
     }
     ul .li1 a{
       display:inline-block;
-      width:196px;
+      width:207px;
       height:159px;
       background:url("../images/index/nav-center1.jpg") no-repeat;
     }
     ul .li2 a{
       display:inline-block;
-      width:196px;
+      width:207px;
       height:180px;
       background:url("../images/index/nav-center2.jpg") no-repeat;
     }
@@ -297,18 +297,135 @@
   }
   ul li{
     float:left;
+    padding:0 8px;
   }
 }
 #main{
   height:$index-main-height;
   padding-left:27px;
-  ul{
+  padding-right:27px;
+  .title{
     height:62px;
     border-bottom:2px solid #e8e8e8;
-    line-height:62px;
+    li{
+      height:62px;
+      display:inline-block;
+      font:bold 14px/100px "arial";
+      float:left;
+      width:200px;
+      text-align: center;
+      margin-right:2px;
+      cursor:pointer;
+      color:#666;
+    }
     .li1{
-
       border-bottom:2px solid #ff931b;
+      text-align:left;
+      text-indent:15px;
+      width:210px;
+      font:bold 20px/90px "arial";
+    }
+    .li2{
+      border-bottom:2px solid #ff931b;
+      color:#ca3037;
+    }
+    .last{
+      width:65px;
+      a{
+        @include link-color(#0088cc);
+      }
+    }
+  }
+  .content{
+    width:1295px;
+    height:400px;
+    background:#f8f8f8;
+    border-bottom:2px solid #ccc;
+    overflow:hidden;
+    .list,.show,.brand,.selling{
+      float:left;
+      height:400px;
+    }
+    .list{
+      width:210px;
+      padding-top:28px;
+      p{
+        font-size:16px;
+        line-height:20px;
+        a{
+          padding:0 25px;
+          @include link-color(#666);
+        }
+      }
+    }
+    .list1{background:url('../images/index/main-content1.jpg')no-repeat;  }
+    .list2{background:url('../images/index/main-content2.jpg')no-repeat;  }
+    .list3{background:url('../images/index/main-content3.jpg')no-repeat;  }
+    .list4{background:url('../images/index/main-content4.jpg')no-repeat;  }
+    .list5{background:url('../images/index/main-content5.jpg')no-repeat;  }
+    .list6{background:url('../images/index/main-content6.jpg')no-repeat;  }
+    .list7{background:url('../images/index/main-content7.jpg')no-repeat;  }
+    .list8{background:url('../images/index/main-content8.jpg')no-repeat;  }
+    .list9{background:url('../images/index/main-content9.jpg')no-repeat;  }
+    .list10{background:url('../images/index/main-content10.jpg')no-repeat;  }
+    .list11{background:url('../images/index/main-content11.jpg')no-repeat;  }
+    .show{
+      width:640px;
+      border-collapse:collapse;
+      box-shadow: 5px 0 6px #ccc;
+      td{
+        width:160px;
+        height:200px;
+      }
+      p{
+        text-indent:15px;
+        font-size:14px;
+        line-height:18px;
+      }
+      span{
+        font-weight:bold;
+        color:red;
+      }
+    }
+    .brand{
+      width:120px;
+      height:400px;
+      padding:0 10px;
+      dd{
+        width:115px;
+        height:60px;
+        text-align:center;
+        background:#fff;
+        border-bottom:1px solid #ccc;
+      }
+    }
+    .selling{
+      width:300px;
+      height:400px;
+      h1{
+        height:40px;
+        line-height:40px;
+      }
+      .product{
+        width:300px;
+        height:360px;
+        background:#FFF;
+      }
+      dd{
+        height:80px;
+        padding:10px 20px 0;
+      }
+      img{
+        float:left;
+        margin-right:20px;
+      }
+      p{
+        color:#888;
+        line-height:20px;
+      }
+      h3{
+        color:#ca3037;
+      }
     }
   }
 }
