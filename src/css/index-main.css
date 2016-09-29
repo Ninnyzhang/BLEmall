@@ -24,14 +24,13 @@ body {
     width: 108px;
     margin-left: 42px; }
   #header ul {
-    width: 552px;
     height: 32px;
     display: inline-block;
     float: right;
     position: relative;
     z-index: 10; }
     #header ul li {
-      width: 90px;
+      width: 100px;
       float: left;
       height: 32px;
       border-left: 1px solid #f9f9f9;
@@ -51,7 +50,6 @@ body {
           color: red; }
       #header ul li dl {
         display: none;
-        background: red;
         width: 90px; }
         #header ul li dl dd {
           background: #fff; }
@@ -68,13 +66,20 @@ body {
 #search {
   height: 65px;
   padding-left: 44px;
-  padding-top: 25px;
-  overflow: hidden; }
+  padding-top: 20px;
+  position: relative;
+  z-index: 5; }
   #search img, #search .txt, #search .form, #search .form button, #search .form ul li {
     float: left; }
+  #search img {
+    display: block; }
+  #search .click {
+    background: red;
+    color: #FFF; }
   #search .form {
     position: relative;
     top: -20px;
+    height: 50px;
     z-index: 0;
     margin-left: 155px; }
     #search .form span {
@@ -83,21 +88,38 @@ body {
       text-align: center;
       cursor: pointer; }
     #search .form button {
+      float: left;
       width: 72px;
       height: 40px;
       background: #d93738 url("../images/index/fangdajing.png") no-repeat center center;
       border: none;
       margin-bottom: 5px; }
+    #search .form dl {
+      width: 375px;
+      height: 180px;
+      background: #fff;
+      z-index: 1;
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 4px; }
+      #search .form dl dd {
+        font-size: 20px;
+        background: #FFF; }
+        #search .form dl dd:hover {
+          background: #ccc; }
   #search .txt {
     width: 374px;
     height: 32px;
     border: 4px solid #d93738; }
+  #search .ul {
+    position: absolute;
+    bottom: -20px; }
   #search ul li a {
     color: #7d6666;
     padding: 0 2px; }
   #search .right {
-    float: right;
-    width: 250px; }
+    float: right; }
     #search .right li {
       float: left;
       font-size: 16px; }
@@ -159,7 +181,8 @@ body {
     margin-left: 27px;
     padding: 0 6px;
     border: 3px solid #ddd;
-    border-top: none; }
+    border-top: none;
+    position: relative; }
     #nav .left .img2 {
       float: right; }
     #nav .left li {
@@ -167,11 +190,17 @@ body {
       border-bottom: 1px solid #eee;
       padding-top: 6px;
       overflow: hidden;
-      font-size: 14px; }
+      font-size: 12px;
+      cursor: pointer;
+      background: #FFF; }
+      #nav .left li:hover {
+        background: #eee; }
       #nav .left li img {
         float: left; }
     #nav .left .li1 {
       height: 51px; }
+      #nav .left .li1 span {
+        line-height: 20px; }
       #nav .left .li1 .div2 {
         clear: both;
         margin-top: 15px; }
@@ -187,12 +216,62 @@ body {
         margin-top: 3px; }
     #nav .left .last {
       border: none; }
+    #nav .left .message {
+      width: 600px;
+      height: 650px;
+      background: #FFF;
+      position: absolute;
+      display: none;
+      z-index: 1000;
+      right: -600px;
+      top: 0; }
+      #nav .left .message h3 {
+        line-height: 25px; }
+      #nav .left .message a {
+        display: inline-block;
+        padding: 0 5px;
+        color: #666; }
+        #nav .left .message a:hover {
+          color: red; }
   #nav .center {
     width: 830px;
     height: 650px; }
     #nav .center .img, #nav .center .img img {
       width: 830px;
       height: 310px; }
+    #nav .center .img {
+      position: relative; }
+      #nav .center .img img {
+        position: absolute;
+        display: none; }
+    #nav .center .img-left, #nav .center .img-right {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      top: 50%;
+      margin-top: -20px;
+      cursor: pointer;
+      z-index: 2;
+      opacity: 0;
+      filter: alpha(opacity=0); }
+    #nav .center .img-left {
+      background: #ccc url("../images/index/nav-arrowLeft.png") no-repeat;
+      left: 0; }
+    #nav .center .img-right {
+      background: #ccc url("../images/index/nav-arrowRight.png") no-repeat;
+      right: 0; }
+    #nav .center .img-bottom {
+      position: absolute;
+      bottom: 10px;
+      right: 0; }
+      #nav .center .img-bottom li {
+        float: left;
+        width: 20px;
+        height: 20px;
+        background: #ccc;
+        border-radius: 10px;
+        margin-right: 5px;
+        cursor: pointer; }
     #nav .center ul .li1 a {
       display: inline-block;
       width: 207px;
@@ -236,7 +315,7 @@ body {
       #nav .right ul a {
         display: inline-block;
         text-align: center;
-        width: 50px;
+        width: 55px;
         height: 27px; }
     #nav .right .div4 a {
       display: inline-block;
@@ -385,5 +464,63 @@ body {
         line-height: 20px; }
       #main .content .selling h3 {
         color: #ca3037; }
+
+#bottom {
+  width: 100%;
+  height: 340px; }
+  #bottom .friendlyLink {
+    height: 156px;
+    margin: 0 32px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 25px;
+    padding-top: 40px; }
+    #bottom .friendlyLink ul {
+      width: 150px;
+      height: 136px;
+      float: left;
+      margin-right: 60px; }
+    #bottom .friendlyLink ul li {
+      float: left;
+      margin-right: 10px; }
+      #bottom .friendlyLink ul li p {
+        line-height: 20px; }
+    #bottom .friendlyLink a {
+      color: #666; }
+      #bottom .friendlyLink a:hover {
+        color: red; }
+    #bottom .friendlyLink .big {
+      width: 200px;
+      margin-right: 0; }
+    #bottom .friendlyLink .last img {
+      margin-top: 20px; }
+  #bottom .final {
+    height: 115px; }
+  #bottom .div1 {
+    height: 46px;
+    margin: 0 32px;
+    border-bottom: 1px solid #ccc;
+    padding-left: 13px;
+    padding-top: 14px; }
+    #bottom .div1 ul, #bottom .div1 img {
+      float: left; }
+    #bottom .div1 .ul {
+      margin-right: 165px; }
+      #bottom .div1 .ul img {
+        margin-right: 10px; }
+      #bottom .div1 .ul li a {
+        line-height: 20px;
+        padding: 0 5px;
+        color: #000; }
+        #bottom .div1 .ul li a:hover {
+          color: red; }
+    #bottom .div1 .ul2 a {
+      display: inline-block;
+      margin-right: 20px;
+      position: relative;
+      bottom: 5px; }
+  #bottom p {
+    margin-left: 32px;
+    line-height: 25px;
+    color: #777; }
 
 /*# sourceMappingURL=index-main.css.map */
