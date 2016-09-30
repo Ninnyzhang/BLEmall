@@ -495,6 +495,10 @@ body {
       margin-top: 20px; }
   #bottom .final {
     height: 115px; }
+    #bottom .final p {
+      margin-left: 32px;
+      line-height: 25px;
+      color: #777; }
   #bottom .div1 {
     height: 46px;
     margin: 0 32px;
@@ -502,14 +506,15 @@ body {
     padding-left: 13px;
     padding-top: 14px; }
     #bottom .div1 ul, #bottom .div1 img {
-      float: left; }
+      float: left;
+      margin-right: 5px; }
     #bottom .div1 .ul {
       margin-right: 165px; }
       #bottom .div1 .ul img {
         margin-right: 10px; }
       #bottom .div1 .ul li a {
         line-height: 20px;
-        padding: 0 5px;
+        padding-right: 5px;
         color: #000; }
         #bottom .div1 .ul li a:hover {
           color: red; }
@@ -518,9 +523,5 @@ body {
       margin-right: 20px;
       position: relative;
       bottom: 5px; }
-  #bottom p {
-    margin-left: 32px;
-    line-height: 25px;
-    color: #777; }
 
 /*# sourceMappingURL=index-main.css.map */

@@ -556,6 +556,11 @@
   }
   .final {
     height: 115px;
+    p{
+      margin-left:32px;
+      line-height: 25px;
+      color:#777;
+    }
   }
   .div1 {
     height: 46px;
@@ -565,6 +570,7 @@
     padding-top: 14px;
     ul, img {
       float: left;
+      margin-right:5px;
     }
     .ul {
       margin-right: 165px;
@@ -573,7 +579,7 @@
       }
       li a {
         line-height: 20px;
-        padding: 0 5px;
+        padding-right:5px;
         @include link-color(#000);
       }
     }
@@ -583,10 +589,5 @@
       position: relative;
       bottom:5px;
     }
-  }
-  p{
-    margin-left:32px;
-    line-height: 25px;
-    color:#777;
   }
 }

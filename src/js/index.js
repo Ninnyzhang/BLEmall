@@ -59,7 +59,7 @@ $(function () {
         $("#nav .img-bottom li").css("background","#ccc").eq(i).css("background","#666")
         interval();
     });
-    $("#nav .img-bottom li").bind("click",function () {
+    $("#nav .img-bottom li").bind("mouseover",function () {
         clearInterval(timer);
         i = $(this).index();
         $("#nav .img img").fadeOut().eq(i).fadeToggle();
