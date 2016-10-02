@@ -1,7 +1,7 @@
 /**
  * Created by Administrator on 2016/10/1.
  */
-var flag = null;
+var flag = false;
 $(function () {
     //随机产生验证码
     $(".form .random").html(random());
@@ -13,17 +13,16 @@ $(function () {
     $(".form input").blur(function () {
         if($(this).hasClass("uName")){
             var userName = $.cookie.getSub($(this).val(),"uName");
-            userName == undefined ? flag = true : flag = false;
         }else if($(this).hasClass("pwd")){
             var pwd = $.cookie.getSub($(".form .uName").val(),"pwd");
-            $(this).val() == pwd ? flag = true : flag = false;
-        }else if($(this).hasClass("verify")){
-            $(this).html() == $(".form .random").val() ? flag = true : flag = false;
+        }
+        if(userName != undefined && $(this).val() == pwd && $(this).html() == $(".form .random").val()){
+            flag = true;
         }
     });
 
     $(".form .btn").click(function () {
-        if(flag && $(".checkbox input:selected")){
+        if(flag){
             alert("登陆成功");
         }else{
             alert("用户名密码错误");

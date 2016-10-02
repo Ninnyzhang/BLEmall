@@ -5,7 +5,7 @@ var regName = /^[a-z0-9_-]{6,16}$/;
 var regPwd = /^[a-z0-9_-]{6,18}$/;
 var regEmail = 	/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 var reg =  null;
-var flag = null;
+var i = 0 ;
 $(function () {
     //随机产生验证码
     $(".message .random").html(random());
@@ -23,18 +23,16 @@ $(function () {
         }else if($(this).hasClass("Pwd")){
             if($(this).val() == $(".message .pwd").val() && $(this).val() != ""){
                 $(this).css("background","url(../images/register/true.png)no-repeat right center");
-                flag = true;
+                i++;
             }else{
                 $(this).css("background","url(../images/register/false.png)no-repeat right center");
-                flag = false;
             }
         }else if($(this).hasClass("verify")){
             if($(this).val() == $(".message .random").html() && $(this).val() != ""){
                 $(this).css("background","url(../images/register/true.png)no-repeat right center");
-                flag = true;
+                i++;
             }else{
                 $(this).css("background","url(../images/register/false.png)no-repeat right center");
-                flag = false;
             }
         }
     });
@@ -44,20 +42,21 @@ $(function () {
     });
     //提交注册信息
     $(".message .register").click(function () {
-        if(flag == true && $(".message .bottom input:selected")){
+        if(i == 5 && $(".message .bottom input:selected")){
             $.cookie.setAll($(".uName").val(),{"uName":$(".uName").val(),"pwd":$(".pwd").val()},getDate(7),"/");
+            alert("注册成功");
         }else{
             alert("注册信息有误");
         }
     })
 });
+
 function regTest(obj) {
     if(reg.test($(obj).val()) && $(obj).val()!= "" ){
         $(obj).css("background","url(../images/register/true.png)no-repeat right center");
-        flag = true;
+        i++;
     }else{
         $(obj).css("background","url(../images/register/false.png)no-repeat right center");
-        flag = false;
     }
 }
 
