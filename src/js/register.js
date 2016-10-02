@@ -4,23 +4,80 @@
 var regName = /^[a-z0-9_-]{6,16}$/;
 var regPwd = /^[a-z0-9_-]{6,18}$/;
 var regEmail = 	/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
+var reg =  null;
+var flag = null;
 $(function () {
-    $("input").focus(function () {
-        // console.log(this.index);
-        // console.log($("input").eq($(this).index()-1));
-        // if( regName.test($(this).val()) && $(this).val()!= "" ){
-        //     $(".message img").eq($(this).index()-1).attr("src","../images/register/true.png");
-        // }else{
-        //     $(".message img").eq($(this).index()-1).attr("src","../images/register/false.png");
-        // }
+    //随机产生验证码
+    $(".message .random").html(random());
+    //表单验证
+    $(".message input").blur(function () {
+        if($(this).hasClass("uName")){
+            reg = regName;
+            regTest(this);
+        }else if($(this).hasClass("pwd")){
+            reg = regPwd;
+            regTest(this);
+        }else if($(this).hasClass("email")){
+            reg = regEmail;
+            regTest(this);
+        }else if($(this).hasClass("Pwd")){
+            if($(this).val() == $(".message .pwd").val() && $(this).val() != ""){
+                $(this).css("background","url(../images/register/true.png)no-repeat right center");
+                flag = true;
+            }else{
+                $(this).css("background","url(../images/register/false.png)no-repeat right center");
+                flag = false;
+            }
+        }else if($(this).hasClass("verify")){
+            if($(this).val() == $(".message .random").html() && $(this).val() != ""){
+                $(this).css("background","url(../images/register/true.png)no-repeat right center");
+                flag = true;
+            }else{
+                $(this).css("background","url(../images/register/false.png)no-repeat right center");
+                flag = false;
+            }
+        }
     });
-    // $("input").blur(function () {
-    //     console.log($(this).index());
-    //     if( regPwd.test($(this).val()) && $(this).val()!= "" ){
-    //         $(".message img").eq($(this).index()).attr("src","../images/register/true.png");
-    //     }else{
-    //         $(".message img").eq($(this).index()).attr("src","../images/register/false.png");
-    //     }
-    // })
-    console.log($("input").eq(4));
+    //重新生成验证码
+    $(".message .btn").click(function () {
+        $(".message .random").html(random());
+    });
+    //提交注册信息
+    $(".message .register").click(function () {
+        if(flag == true && $(".message .bottom input:selected")){
+            $.cookie.setAll($(".uName").val(),{"uName":$(".uName").val(),"pwd":$(".pwd").val()},getDate(7),"/");
+        }else{
+            alert("注册信息有误");
+        }
+    })
 });
+function regTest(obj) {
+    if(reg.test($(obj).val()) && $(obj).val()!= "" ){
+        $(obj).css("background","url(../images/register/true.png)no-repeat right center");
+        flag = true;
+    }else{
+        $(obj).css("background","url(../images/register/false.png)no-repeat right center");
+        flag = false;
+    }
+}
+
+function getDate(num){
+    var d = new Date();
+    var ms = 24 * 60 * 60 * 1000 * num + d.getTime();
+    return new Date(ms);
+}
+
+function random() {
+    var str = "";
+    while(str.length < 4){
+        var num = Math.random() * 76 + 48;
+        if (num >= 48 && num <= 57) {
+            str += String.fromCharCode(num);
+        } else if (num >= 65 && num <= 91) {
+            str += String.fromCharCode(num);
+        } else if (num >= 97 && num <= 123) {
+            str += String.fromCharCode(num);
+        }
+    }
+    return str;
+}

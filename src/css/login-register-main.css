@@ -174,7 +174,8 @@ body {
     width: 277px;
     height: 30px;
     border: 1px solid #CCC;
-    margin-bottom: 30px; }
+    margin-bottom: 30px;
+    text-indent: 20px; }
   .register-content .message .verify {
     width: 75px;
     margin-right: 20px; }
