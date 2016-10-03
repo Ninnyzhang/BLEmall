@@ -164,6 +164,10 @@ body {
       background: #c12324; }
       #nav .nav li:hover {
         background: #ac1010; }
+      #nav .nav li a {
+        color: #FFF; }
+        #nav .nav li a:hover {
+          color: #FFF; }
     #nav .nav .li1 {
       width: 225px;
       font-weight: 500;
@@ -199,7 +203,7 @@ body {
   background: url("../images/special/title-top.jpg") no-repeat; }
 #main .title {
   height: 396px;
-  margin-left: 27px;
+  margin-left: 50px;
   background: url("../images/special/title.jpg") no-repeat 0 36px;
   position: relative; }
 #main .time {
@@ -218,6 +222,67 @@ body {
     text-indent: 1em; }
   #main .time a {
     font-size: 18px; }
+#main .product {
+  height: 800px;
+  margin-top: 45px;
+  padding-left: 50px;
+  overflow: hidden; }
+  #main .product div {
+    width: 279px;
+    height: 389px;
+    background: #f2f2f2;
+    margin: 0 30px 20px 0;
+    float: left; }
+  #main .product h1 {
+    height: 35px;
+    line-height: 35px;
+    margin-bottom: 5px;
+    color: #ca3037; }
+  #main .product h1 span {
+    font-size: 16px; }
+  #main .product h1 a {
+    display: block;
+    width: 87px;
+    height: 35px;
+    background: #ca3037;
+    color: #fff;
+    font: normal 16px/35px "arial";
+    text-align: center;
+    float: right; }
+  #main .product h3, #main .product h1 {
+    padding: 0 10px; }
+  #main .product h3 {
+    height: 40px;
+    line-height: 20px;
+    font-weight: normal; }
+  #main .product h3 span {
+    display: inline-block;
+    width: 59px;
+    height: 20px;
+    font: normal 12px/20px "arial";
+    text-align: center;
+    color: #fff;
+    background: url("../images/special/product-price.jpg") no-repeat;
+    margin-right: 10px; }
+  #main .product h3 del {
+    color: #999; }
+#main .reccommendation {
+  height: 215px;
+  padding: 0 50px; }
+  #main .reccommendation h1 {
+    height: 70px;
+    line-height: 70px; }
+    #main .reccommendation h1 span {
+      font: normal 16px "arial";
+      color: #666; }
+  #main .reccommendation .brand {
+    height: 141px;
+    border: 2px solid #eee;
+    padding: 3px;
+    background: #eee; }
+    #main .reccommendation .brand a {
+      float: left;
+      margin-right: 7px; }
 
 #bottom {
   width: 100%;

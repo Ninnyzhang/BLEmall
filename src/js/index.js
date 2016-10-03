@@ -3,13 +3,13 @@
  */
 var i = 0 ;
 $(function () {
-    //搜索框显示
-    $("#search .txt").focus(function () {
-        $("#search .form dl").show();
-    });
-    $("#search .txt").blur(function () {
-        $("#search .form dl").hide();
-    })
+    // //搜索框显示
+    // $("#search .txt").focus(function () {
+    //     $("#search .form dl").show();
+    // });
+    // $("#search .txt").blur(function () {
+    //     $("#search .form dl").hide();
+    // })
     setTimeout(function () {
         $("#nav .nav img").hide();
     },3000);
@@ -67,7 +67,35 @@ $(function () {
             $("#main .title li").removeClass("li2");
             $(this).addClass("li2");
         }
-    })
+    });
+    //搜索框
+    var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+    ];
+    $( "#search .txt" ).autocomplete({
+        source: availableTags
+    });
 });
 function interval(str) {
     timer = setInterval(function () {

@@ -13,7 +13,11 @@ $(function () {
     $(".message input").blur(function () {
         if($(this).hasClass("uName")){
             reg = regName;
-            regTest(this);
+            if($.cookie.getSub($(this).val(),"uName") == undefined){
+                regTest(this);
+            }else{
+                $(this).css("background","url(../images/register/false.png)no-repeat right center");
+            }
         }else if($(this).hasClass("pwd")){
             reg = regPwd;
             regTest(this);

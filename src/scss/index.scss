@@ -163,9 +163,12 @@
       float:left;
       padding:0 30px;
       font:bold 16px/35px "arial";
-      color:#FFF;
       cursor:pointer;
+      color:#FFF;
       @include background(#c12324,#ac1010);
+      a{
+        @include link-color(#FFF,#FFF);
+      }
     }
     .li1{
       width:225px;
@@ -413,7 +416,7 @@
   }
   ul li{
     float:left;
-    padding:0 8px;
+    padding:0 6px;
   }
 }
 #main{
@@ -560,7 +563,7 @@
       margin-bottom:10px;
     }
     ul {
-      width: 150px;
+      width: 145px;
       height: 136px;
       float: left;
       margin-right: 60px;
