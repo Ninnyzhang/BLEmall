@@ -10,9 +10,7 @@ $(function () {
     // $("#search .txt").blur(function () {
     //     $("#search .form dl").hide();
     // })
-    setTimeout(function () {
-        $("#nav .nav img").hide();
-    },3000);
+
     //轮播图
     $("#nav .img img").eq(0).fadeToggle();
     $("#nav .img-bottom li").eq(0).css("background","#666");
@@ -69,32 +67,42 @@ $(function () {
         }
     });
     //搜索框
-    var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
+    $.widget( "custom.catcomplete", $.ui.autocomplete, {
+        _create: function () {
+            this._super();
+            this.widget().menu("option", "items", "> :not(.ui-autocomplete-category)");
+        },
+        _renderMenu: function (ul, items) {
+            var that = this,
+                currentCategory = "";
+            $.each(items, function (index, item) {
+                var li;
+                if (item.category != currentCategory) {
+                    ul.append("<li class='ui-autocomplete-category'>" + item.category + "</li>");
+                    currentCategory = item.category;
+                }
+                li = that._renderItemData(ul, item);
+                if (item.category) {
+                    li.attr("aria-label", item.category + " : " + item.label);
+                }
+            });
+        }
+    });
+    var data = [
+        { label: "anders", category: "" },
+        { label: "andreas", category: "" },
+        { label: "antal", category: "" },
+        { label: "annhhx10", category: "Products" },
+        { label: "annk K12", category: "Products" },
+        { label: "annttop C13", category: "Products" },
+        { label: "anders andersson", category: "People" },
+        { label: "andreas andersson", category: "People" },
+        { label: "andreas johnson", category: "People" }
     ];
-    $( "#search .txt" ).autocomplete({
-        source: availableTags
+
+    $( "#search .txt" ).catcomplete({
+        delay: 0,
+        source: data
     });
 });
 function interval(str) {

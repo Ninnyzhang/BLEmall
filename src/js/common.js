@@ -17,7 +17,9 @@ $("#header ul li").has("dl").bind({
         $(this).find("dl").hide();
     }
 });
-
+setTimeout(function () {
+    $("#nav .nav img").hide();
+},3000);
 //切换
 $("#search .form span").eq(0).addClass("click");
 $("#search .form span").bind("click",function () {

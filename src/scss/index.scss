@@ -67,7 +67,7 @@
   }
   .form{
     position: relative;
-    top:-20px;
+    top:-15px;
     height:50px;
     z-index: 0;
     margin-left:155px;
@@ -85,20 +85,6 @@
       border:none;
       margin-bottom:5px;
     }
-    dl{
-      width:375px;
-      height:180px;
-      background:#fff;
-      z-index:1;
-      display:none;
-      position: absolute;
-      top:50px;
-      left:4px;
-      dd{
-        font-size: 20px;
-        @include  background(#FFF,#ccc);
-      }
-    }
   }
   .txt{
     width:374px;
@@ -107,7 +93,7 @@
   }
   .ul{
     position:absolute;
-    bottom:-20px;
+    bottom:-23px;
   }
   ul li{
     a{

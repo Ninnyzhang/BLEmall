@@ -46,7 +46,7 @@ $(function () {
     });
     //提交注册信息
     $(".message .register").click(function () {
-        if(i == 5 && $(".message .bottom input:selected")){
+        if(i == 5 && $(".message .bottom input:checked").length != 0){
             $.cookie.setAll($(".uName").val(),{"uName":$(".uName").val(),"pwd":$(".pwd").val()},getDate(7),"/");
             alert("注册成功");
         }else{
