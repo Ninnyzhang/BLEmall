@@ -1,7 +1,8 @@
 /**
  * Created by Administrator on 2016/10/1.
  */
-var flag = false;
+var userName = "";
+var pwd = "";
 $(function () {
     //随机产生验证码
     $(".form .random").html(random());
@@ -12,18 +13,17 @@ $(function () {
     //验证登录信息
     $(".form input").blur(function () {
         if($(this).hasClass("uName")){
-            var userName = $.cookie.getSub($(this).val(),"uName");
+            userName = $.cookie.getSub($(this).val(),"uName");
+            console.log(typeof userName);
         }else if($(this).hasClass("pwd")){
-            var pwd = $.cookie.getSub($(".form .uName").val(),"pwd");
-        }
-        if(userName != undefined && $(this).val() == pwd && $(this).html() == $(".form .random").val()){
-            flag = true;
+            pwd = $.cookie.getSub(userName,"pwd");
         }
     });
 
     $(".form .btn").click(function () {
-        if(flag){
+        if($(".form .pwd").val() == pwd && $(".form .verify").val() == $(".form .random").html()){
             alert("登陆成功");
+            $.cookie.setAll("login",{"user":userName},getDate(7),"/");
         }else{
             alert("用户名密码错误");
         }
@@ -42,4 +42,10 @@ function random() {
         }
     }
     return str;
+}
+
+function getDate(num){
+    var d = new Date();
+    var ms = 24 * 60 * 60 * 1000 * num + d.getTime();
+    return new Date(ms);
 }
