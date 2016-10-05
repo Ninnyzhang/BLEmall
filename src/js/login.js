@@ -4,6 +4,7 @@
 var userName = "";
 var pwd = "";
 $(function () {
+    $(".form input").val("");
     //随机产生验证码
     $(".form .random").html(random());
     //重新生成验证码
@@ -24,6 +25,7 @@ $(function () {
         if($(".form .pwd").val() == pwd && $(".form .verify").val() == $(".form .random").html()){
             alert("登陆成功");
             $.cookie.setAll("login",{"user":userName},getDate(7),"/");
+            window.location.replace("index.html");
         }else{
             alert("用户名密码错误");
         }
@@ -42,10 +44,4 @@ function random() {
         }
     }
     return str;
-}
-
-function getDate(num){
-    var d = new Date();
-    var ms = 24 * 60 * 60 * 1000 * num + d.getTime();
-    return new Date(ms);
 }

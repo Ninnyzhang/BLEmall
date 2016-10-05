@@ -7,6 +7,7 @@ var regEmail = 	/^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 var reg =  null;
 var i = 0 ;
 $(function () {
+    $(".message input").html("");
     //随机产生验证码
     $(".message .random").html(random());
     //表单验证
@@ -64,11 +65,6 @@ function regTest(obj) {
     }
 }
 
-function getDate(num){
-    var d = new Date();
-    var ms = 24 * 60 * 60 * 1000 * num + d.getTime();
-    return new Date(ms);
-}
 
 function random() {
     var str = "";

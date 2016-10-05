@@ -51,7 +51,7 @@
 }
 #main{
   height: 743px;
-  padding-left:143px;
+  padding-left:200px;
   .title{
     width:951px;
     height:36px;
@@ -78,6 +78,9 @@
       top:3px;
       margin-right:5px;
     }
+  }
+  .car{
+    display:none;
   }
   table{
     width:951px;
@@ -140,12 +143,15 @@
           float:left;
         }
       }
+      .price{
+        text-align:center;
+      }
     }
     .last{
       height:40px;
       botder-bottom:none;
       input{
-        margin-left:5px;
+        margin-left:10px;
         margin-right:20px;
       }
       td{
@@ -158,6 +164,8 @@
     }
     .cart{
       height:44px;
+      background:#ccc;
+      border-bottom:1px solid #000;
       .shop{
         text-indent:20px;
         font-size:16px;
@@ -183,6 +191,9 @@
         }
       }
     }
+  }
+  .none{
+    display:none;
   }
   h3{
     width:951px;

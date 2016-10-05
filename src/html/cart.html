@@ -51,28 +51,28 @@
             <li>小计</li>
             <li>操作</li>
         </ul>
-        <p><input type="checkbox"/>商家:百联E城</p>
-        <table>
+        <p class="car"><input type="checkbox" class="all"/>商家:百联E城</p>
+        <table class="car">
             <tr class="tr1">
-                <td class="img"><input type="checkbox"/><img src="../images/product/product1-small.jpg"/></td>
-                <td class="name">美心 精选口味 限量版 730g 月饼礼盒 香港地区</td>
+                <td class="img"><input type="checkbox"/><img/></td>
+                <td class="name"></td>
                 <td></td>
                 <td class="price"></td>
                 <td class="num">
                     <div>
                         <button class="reduce">-</button>
-                        <div class="txt">0</div>
+                        <div class="txt"></div>
                         <button class="add">+</button>
                     </div>
                 </td>
                 <td class="sum"></td>
                 <td>
                     <a href="#">加入收藏夹</a>
-                    <a href="#">删除</a>
+                    <a href="#" class="remove">删除</a>
                 </td>
             </tr>
             <tr class="last">
-                <td><input type="checkbox"/> 全选</td>
+                <td><input type="checkbox" class="all"/> 全选</td>
                 <td><a href="#">批量删除</a></td>
                 <td colspan="5" class="right">已选商品<span>0</span>件（包含换购商品）</td>
             </tr>
@@ -80,12 +80,13 @@
                 <td colspan="4" class="shop"><a href="#">继续购物>></a></td>
                 <td>合计[不含运费]:</td>
                 <td colspan="2" class="sum">
-                    ￥<span>5</span>
+                    ￥<span></span>
                     <button>去结算</button>
                 </td>
             </tr>
         </table>
-        <h3>购买了这些商品的用户还购买</h3>
+        <a href="index.html" class="none"><img src="../images/cart/none.png"/></a>
+        <h3 class="car">购买了这些商品的用户还购买</h3>
     </div>
     <div id="bottom">
         <div class="friendlyLink">
@@ -180,7 +181,7 @@
     </div>
 </body>
 </html>
-<script src="../js/jquery-1.8.3.js"></script>
+<script src="../js/lib/jquery-1.8.3.js"></script>
 <script src="../js/lib/jquery.cookie.js"></script>
 <script src="../js/common.js"></script>
 <script src="../js/cart.js"></script>

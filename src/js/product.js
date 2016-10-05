@@ -15,11 +15,11 @@ $(function () {
     //放大镜
     $("#main .left .smallImg").bind({
        mouseenter : function () {
-           $("#main .left .big").fadeIn();
+           $("#main .left .big,#main .left .move").css("display","block");
        },
        mousemove : function (e) {
-           var x = e.offsetX - $(".move").width() / 2;
-           var y = e.offsetY - $(".move").width() / 2;
+           var x = e.pageX - $(this).offset().left - $(".move").width() / 2;
+           var y = e.pageY - $(this).offset().top - $(".move").width() / 2;
 
            if(x >= this.offsetWidth - $(".move").width()){
                x = this.offsetWidth - $(".move").width();
@@ -47,14 +47,23 @@ $(function () {
            });
        },
         mouseleave : function () {
-            $("#main .left .big").fadeOut();
+            $("#main .left .big,#main .left .move").css("display","none");
         }
     });
 
     //添加购物车
     $("#main .right .car").click(function () {
-        $.cookie.setAll("shop",{"shopName":$("#main .product .title").html(),"price":$("#main .right .red").html(),
-            "num":$("#main .right .number .txt").html(),"img":$("#main .left .small img").attr("src")},getDate(7),"/")
+        if($.cookie.get("login") != "undefined") {
+            var value = "";
+            var id = $("#main .product .li1 a").html();
+            value += "id:" + id + "&name:" + $("#main .product .title").html() + "&price:" + $("#main .right .red").html() + "&img:" +
+                $("#main .left .small img").attr("src") + "&num:" + $("#main .right .number .txt").html() ;
+            var key = $.cookie.getSub("login","user") +"shop";
+            $.cookie.setAll(key,value,getDate(7),"/");
+            alert("添加成功");
+        }else{
+            alert("请先登录");
+        }
     });
 
     //倒计时

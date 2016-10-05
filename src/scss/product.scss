@@ -233,13 +233,19 @@
       .smallImg{
         width:376px;
         height:301px;
+      }
+      .product1{
         background:url("../images/product/product1-big.jpg")no-repeat;
+      }
+      .product2{
+        background:url("../images/product/product2-big.jpg")no-repeat;
       }
       .move{
         width:80px;
         height:80px;
         background:#ccc;
         opacity:0.5;
+        display:none;
         filter: alpha(opacity = 50);
         position:absolute;
       }
@@ -248,6 +254,7 @@
       width:376px;
       height:489px;
       border:2px solid #d2d2d2;
+      position: relative;
       .small{
         display:block;
         width:63px;
@@ -264,6 +271,7 @@
     .link{
       margin-top:20px;
       line-height:5px;
+      overflow: hidden;
       li{
         float:left;
       }
@@ -392,7 +400,7 @@
       @include link-color(#000);
     }
     .a3{
-      font:normal 8px/44px "arial";
+      font:normal 12px/44px "arial";
       @include link-color(#777);
     }
   }
